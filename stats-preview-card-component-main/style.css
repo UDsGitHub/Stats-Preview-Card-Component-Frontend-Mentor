@@ -1,0 +1,182 @@
+:root {
+  --verydarkblu: hsl(233, 47%, 7%);
+  --darkblu: hsl(244, 38%, 16%);
+  --softviolet: hsl(277, 64%, 61%);
+  --transpwhite: hsla(0, 0%, 100%, 0.75);
+  --transpwhite2: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--verydarkblu);
+  color: white;
+}
+
+/* Desktop Design */
+  .main-cont {
+    color: white;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .content {
+    border-radius: 10px 0 0 10px;
+    height: auto;
+    width: 570px;
+    padding: 4rem;
+    background: var(--darkblu);
+  }
+
+  .content h2 {
+    font-size: 32px;
+  }
+
+  .content span {
+    color: var(--softviolet);
+  }
+
+  .inner {
+    width: 380px;
+  }
+
+  .inner p {
+    color: var(--transpwhite);
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+    border-collapse: separate;
+    border-spacing: 50px 0;
+  }
+
+  .stats h3 {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .stats p {
+    margin: 0;
+    color: var(--transpwhite2);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "Catamaran", sans-serif;
+  }
+
+  .image {
+    width: 570px;
+    height: 446px;
+    background-image: url(images/image-header-desktop.jpg);
+    border-radius: 0 10px 10px 0;
+  }
+
+  /* overlay to tint bg */
+  .image::before {
+    display: block;
+    content: "";
+    width: 570px;
+    height: 446px;
+    background: hsla(277, 90%, 30%, 0.568);
+  }
+
+  .attribution {
+    color: white;
+  }
+
+  .attribution a {
+    text-decoration: none;
+  }
+
+
+/* Mobile Design */
+
+@media (max-width: 375px) {
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    background: var(--darkblu);
+    order: 2;
+    width: 330px;
+    border-radius: 0 0 10px 10px;
+    padding: 1rem;
+  }
+
+  .content h2 {
+    font-size: 28px;
+  }
+
+  .content span {
+    color: var(--softviolet);
+  }
+
+  .content p {
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--transpwhite);
+  }
+
+  .inner {
+    width: 90%;
+    text-align: center;
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-collapse: separate;
+    border-spacing: 50px 0;
+    margin: 1rem 0;
+  }
+
+  .stats h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .stats p {
+    margin: 0;
+    color: var(--transpwhite2);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: "Catamaran", sans-serif;
+  }
+
+  .image {
+    background-image: url(images/image-header-mobile.jpg);
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    width: 330px;
+    height: 240px;
+    order: 1;
+  }
+
+  /* overlay to tint bg */
+  .image::before {
+    display: block;
+    content: "";
+    width: 330px;
+    height: 240px;
+    background: hsla(277, 90%, 30%, 0.568);
+  }
+}
